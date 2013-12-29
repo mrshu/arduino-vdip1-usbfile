@@ -10,11 +10,11 @@ class VDIP1File
 {
 	public:
 		VDIP1File(int rx, int tx);
-        void open(string file);
-        void write(string data);
+        void open(std::string file);
+        void write(std::string data);
         void close();
 	private:
-		string filename;
+        std::string filename;
         SoftwareSerial serial;
 };
 
