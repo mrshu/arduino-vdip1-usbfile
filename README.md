@@ -1,6 +1,8 @@
 VDIP1File: a library for working with VDIP1
 ===========================================
 
+This is a small library which shall help with writing (and later reading
+**TODO**) files to (and from) a USB stick with the *VDIP1*.
 
 
 Example usage
