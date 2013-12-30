@@ -33,7 +33,7 @@ void VDIP1File::write(char* data)
 
 void VDIP1File::writeln(char* data)
 {
-    char buff[len(data) + 2];
+    char buff[strlen(data) + 2];
     sprintf(buff, "%s\n", data);
 
     VDIP1File::write(buff);

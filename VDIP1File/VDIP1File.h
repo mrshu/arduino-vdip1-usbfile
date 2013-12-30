@@ -4,6 +4,7 @@
 #include "Arduino.h"
 
 #include <cstring>
+#include <cstdlib>
 #include <SoftwareSerial.h>
 
 
