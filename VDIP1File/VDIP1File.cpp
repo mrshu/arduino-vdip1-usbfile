@@ -18,12 +18,7 @@ void VDIP1File::write(char* data)
     int len = strlen(data);
 
     serial.print("WRF ");
-    char buff[30];
-
-    // convert int to string (sorta)
-    itoa(len, buff, 10);
-
-    serial.print(buff);
+    serial.print(len);
     serial.write((byte) 13);
 
     // print the actual data
