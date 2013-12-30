@@ -30,6 +30,15 @@ void VDIP1File::write(char* data)
     serial.print(data);
 }
 
+
+void VDIP1File::writeln(char* data)
+{
+    char buff[len(data) + 2];
+    sprintf(buff, "%s\n", data);
+
+    VDIP1File::write(buff);
+}
+
 void VDIP1File::close()
 {
     serial.print("CLF ");
