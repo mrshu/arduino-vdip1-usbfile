@@ -17,15 +17,17 @@ void VDIP1File::write(char* data)
 {
     int len = strlen(data);
 
-    // we are going to write the data along with the \n character so
-    // that is why we need this line
-    len += 1;
-
     serial.print("WRF ");
-    //serial.print(itoa(len));
-    serial.print(data);
+    char buff[30];
 
+    // convert int to string (sorta)
+    itoa(len, buff, 10);
+
+    serial.print(buff);
     serial.write((byte) 13);
+
+    // print the actual data
+    serial.print(data);
 }
 
 void VDIP1File::close()
