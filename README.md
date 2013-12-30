@@ -26,3 +26,17 @@ Here is what it should look like
     {
 
     }
+
+
+Installation
+------------
+
+On unix-like filesystems you can run
+
+    $ make install
+
+This will install the library into the `~/sketchbook/library/` directory, which
+is supposed to contain all your 'user' libraries.
+
+
+On Windows please place the 'VDIP1File' folder into `My Documents -> Arduino -> libraries`.
