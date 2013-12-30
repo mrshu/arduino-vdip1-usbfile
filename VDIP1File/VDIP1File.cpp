@@ -10,7 +10,7 @@ void VDIP1File::open(char* file)
 
     serial.print("OPW ");
     serial.print(file);
-    serial.print((byte) 13);
+    serial.write((byte) 13);
 }
 
 void VDIP1File::write(char* data)
@@ -25,12 +25,12 @@ void VDIP1File::write(char* data)
     //serial.print(itoa(len));
     serial.print(data);
 
-    serial.print((byte) 13);
+    serial.write((byte) 13);
 }
 
 void VDIP1File::close()
 {
     serial.print("CLF ");
     serial.print(filename);
-    serial.print((byte) 13);
+    serial.write((byte) 13);
 }
