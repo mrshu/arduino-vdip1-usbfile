@@ -14,6 +14,7 @@ class VDIP1File
 		VDIP1File(int rx, int tx);
         void open(char* file);
         void write(char* data);
+        void writeln(char* data);
         void close();
 	private:
         char* filename;
