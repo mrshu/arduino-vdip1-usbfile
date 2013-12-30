@@ -17,7 +17,7 @@ Here is what it should look like
     VDIP1File f = new VDIP1File(5, 4);
     void setup()
     {
-        f.open("test.txt");
+        f.open("TEST.TXT");
         f.write("some testing input");
         f.close();
     }
@@ -30,6 +30,10 @@ Here is what it should look like
 
 Installation
 ------------
+
+First of all either clone this repository or
+[download](https://github.com/mrshu/arduino-vdip1-usbfile/archive/master.zip)
+its contents and unzip it.
 
 On unix-like filesystems you can run
 
