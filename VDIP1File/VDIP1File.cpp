@@ -1,12 +1,10 @@
-
 #include "VDIP1File.h"
 
-VDIP1File::VDIP1File(int rx, int tx)
+VDIP1File::VDIP1File(int rx, int tx) : serial(rx, tx)
 {
-    serial = new SoftwareSerial(rx, tx);
 }
 
-void VDIP1File::open(string file)
+void VDIP1File::open(char* file)
 {
     filename = file;
 
@@ -15,16 +13,16 @@ void VDIP1File::open(string file)
     serial.print((byte) 13);
 }
 
-void VDIP1File::write(string data)
+void VDIP1File::write(char* data)
 {
-    int len = data.length();
+    int len = strlen(data);
 
     // we are going to write the data along with the \n character so
     // that is why we need this line
     len += 1;
 
     serial.print("WRF ");
-    serial.print(itoa(len));
+    //serial.print(itoa(len));
     serial.print(data);
 
     serial.print((byte) 13);

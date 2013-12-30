@@ -3,18 +3,20 @@
 
 #include "Arduino.h"
 
+#include <cstring>
 #include <SoftwareSerial.h>
-#include <string>
+
+
 
 class VDIP1File
 {
 	public:
 		VDIP1File(int rx, int tx);
-        void open(std::string file);
-        void write(std::string data);
+        void open(char* file);
+        void write(char* data);
         void close();
 	private:
-        std::string filename;
+        char* filename;
         SoftwareSerial serial;
 };
 

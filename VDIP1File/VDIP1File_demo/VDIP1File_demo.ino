@@ -5,7 +5,7 @@
 VDIP1File f(5, 4);
 void setup()
 {
-    f.open("test.txt");
+    f.open("TEST.TXT");
     f.write("some testing input");
     f.close();
 }
