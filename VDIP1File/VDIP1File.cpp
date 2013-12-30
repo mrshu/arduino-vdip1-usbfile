@@ -28,10 +28,15 @@ void VDIP1File::write(char* data)
 
 void VDIP1File::writeln(char* data)
 {
-    char buff[strlen(data) + 2];
-    sprintf(buff, "%s\n", data);
+    int len = strlen(data);
 
-    VDIP1File::write(buff);
+    serial.print("WRF ");
+    serial.print(len+1);
+    serial.write((byte) 13);
+
+    // print the actual data
+    serial.print(data);
+    serial.write((byte) 13);
 }
 
 void VDIP1File::close()
